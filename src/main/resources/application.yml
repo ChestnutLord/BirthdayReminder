@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: BirthdayReminder
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
+  storage:
+    photos-dir: /app/photos
+
+  servlet:
+    multipart:
+      max-file-size: 25MB
+      max-request-size: 40MB
+
+server:
+  port: 8080
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
