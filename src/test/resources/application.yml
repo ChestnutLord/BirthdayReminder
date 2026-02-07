@@ -11,3 +11,7 @@ spring:
       ddl-auto: create-drop
   storage:
     photos-dir: ${java.io.tmpdir}/birthday-reminder-test-photos
+
+notification:
+  schedule: "0 0 8 * * *"
+  recipients: test@test.local
