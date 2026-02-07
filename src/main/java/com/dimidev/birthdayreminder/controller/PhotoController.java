@@ -16,14 +16,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/api/photos")
+@RequestMapping("/api/contacts/{contactId}/photos")
 @RequiredArgsConstructor
 public class PhotoController implements PhotoApi {
 
     private final PhotoService photoService;
 
     @Override
-    @GetMapping("/{contactId}")
+    @GetMapping()
     public ResponseEntity<Resource> getById(@PathVariable Long contactId) {
         LoadedPhoto loaded;
         try {
