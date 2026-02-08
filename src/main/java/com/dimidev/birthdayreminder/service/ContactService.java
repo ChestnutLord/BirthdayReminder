@@ -13,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 
 @Service
@@ -61,11 +62,16 @@ public class ContactService {
     }
 
     public Contact update(Long id, ContactCreateUpdateDto dto, MultipartFile photo) {
-        Contact contact = contactMapper.toModel(dto);
-        contact.setId(id);
+        Contact contact = repository.findById(id)
+                .orElseThrow(() -> new NoSuchElementException("Контакт не найден"));
+
+        contact.setFirstName(dto.getFirstName().trim());
+        contact.setLastName(dto.getLastName().trim());
+        contact.setBirthDate(dto.getBirthDate());
+        contact.setEmail(dto.getEmail());
         setStatusFromId(contact, dto.getStatusId());
-        contact = repository.save(contact);
         handlePhotoUpdate(contact, photo, dto.getRemovePhoto());
+
         return repository.save(contact);
     }
 
