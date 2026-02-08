@@ -1,7 +1,7 @@
 package com.dimidev.birthdayreminder.controller;
 
 import com.dimidev.birthdayreminder.controller.api.NotificationApi;
-import com.dimidev.birthdayreminder.dto.NotificationSendResultDto;
+import com.dimidev.birthdayreminder.dto.notification.NotificationSendResultDto;
 import com.dimidev.birthdayreminder.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;

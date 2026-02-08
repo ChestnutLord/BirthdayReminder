@@ -1,6 +1,6 @@
 package com.dimidev.birthdayreminder.service;
 
-import com.dimidev.birthdayreminder.dto.NotificationSendResultDto;
+import com.dimidev.birthdayreminder.dto.notification.NotificationSendResultDto;
 import com.dimidev.birthdayreminder.model.Contact;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;

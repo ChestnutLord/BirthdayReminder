@@ -1,6 +1,6 @@
 package com.dimidev.birthdayreminder.controller.api;
 
-import com.dimidev.birthdayreminder.dto.NotificationSendResultDto;
+import com.dimidev.birthdayreminder.dto.notification.NotificationSendResultDto;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 

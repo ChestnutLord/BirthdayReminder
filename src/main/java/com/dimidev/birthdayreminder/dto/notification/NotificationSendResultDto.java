@@ -1,4 +1,4 @@
-package com.dimidev.birthdayreminder.dto;
+package com.dimidev.birthdayreminder.dto.notification;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
