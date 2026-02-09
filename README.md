@@ -1,6 +1,6 @@
 # Поздравлятор (Birthday Reminder)
 
-Ведение списка дней рождений.
+**Фронтенд доступен по ссылке [https://github.com/ChestnutLord/birthday-reminder-ui](https://github.com/ChestnutLord/birthday-reminder-ui)**
 
 ## Stack
 
