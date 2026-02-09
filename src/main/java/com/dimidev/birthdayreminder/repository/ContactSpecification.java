@@ -12,19 +12,6 @@ public final class ContactSpecification {
     private ContactSpecification() {
     }
 
-    public static Specification<Contact> nameContainsIgnoreCase(String search) {
-        return (root, query, cb) -> {
-            if (search == null || search.isBlank()) {
-                return cb.conjunction();
-            }
-            String pattern = "%" + search.trim().toLowerCase() + "%";
-            return cb.or(
-                    cb.like(cb.lower(root.get("firstName")), pattern),
-                    cb.like(cb.lower(root.get("lastName")), pattern)
-            );
-        };
-    }
-
     public static Specification<Contact> hasStatusIdIn(Collection<Long> statusIds) {
         return (root, query, cb) -> {
             if (statusIds == null || statusIds.isEmpty()) {
